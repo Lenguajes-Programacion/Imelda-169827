@@ -19,6 +19,7 @@ namespace PracticaDos
                 Console.WriteLine("(-) Resta");
                 Console.WriteLine("(*) Multiplicación");
                 Console.WriteLine("(/) Disión");
+                Console.WriteLine("(m) memoria");
                 Console.WriteLine("e Para salir \n");
                 string opcion = Console.ReadLine();
                 switch (opcion)
@@ -58,6 +59,10 @@ namespace PracticaDos
                         valor2 = int.Parse(Console.ReadLine());
                         result = Calculus.division(valor1, valor2);
                         Console.WriteLine("Tu resultado es: {0} \n", result);
+                        break;
+                    case "m":
+                        Memoria memo = new Memoria();
+                        memo.LeerMemoria();
                         break;
                     case "e":
                         Console.WriteLine("-----------------\n");
