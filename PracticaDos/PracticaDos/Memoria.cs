@@ -22,8 +22,24 @@ namespace PracticaDos
             {
                 // Interaccion indibidual de cada grupo de datos del objeto Json
                 Console.WriteLine("Dato de Memoria");
-                Console.WriteLine(item.ToString());
+                memoriaData meoriaData = new MemoriaData(DateTime.Now, item["operacion"].ToString(),(int) int;
+                Console.WriteLine(item.Key.ToString());
+                Console.WriteLine(memoriaData.resultado.ToString());
             }
         }
 	}
+    class MemoriaData
+    {
+        public DateTime fecha;
+        public String operacion;
+        public int resultado;
+        public int imelda;
+        
+        public MemoriaData(DateTime fecha, String operacion, int resultado)
+        {
+            fecha = fecha;
+            operacion = operacion;
+            resultado = resultado;
+        }
+    }
 }
