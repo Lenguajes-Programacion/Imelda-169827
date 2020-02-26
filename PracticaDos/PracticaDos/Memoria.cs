@@ -12,7 +12,7 @@ namespace PracticaDos
         public void LeerMemoria()
         {
             string archivoDB = "../../../db.json";
-            StreamReader reader = new StreamReader(archivoDB);
+            var reader = new StreamReader(archivoDB);
             var dbJSON = reader.ReadToEnd();
             var dbObject = JObject.Parse(dbJSON);
             // Prueba de lectura de archivo db.json
