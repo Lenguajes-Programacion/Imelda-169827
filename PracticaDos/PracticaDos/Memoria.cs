@@ -12,23 +12,25 @@ namespace PracticaDos
         public void LeerMemoria()
         {
             string archivoDB = "../../../db.json";
-            var reader = new StreamReader(archivoDB);
-            var dbJSON = reader.ReadToEnd();
-            var dbObject = JObject.Parse(dbJSON);
-            // Prueba de lectura de archivo db.json
-            //var result = dbObject.ToString();
-            //var result = dbObject["arreglo"].ToString();
-            //var result = dbObject["arreglo"][0].ToString();
-            // Lectura de json iterable
-            foreach (var item  in dbObject)
+            using (var reader = new StreamReader(archivoDB))
             {
-                // Iteración individual de cada grupo de datos del objeto json.
-                Console.WriteLine("Dato en memoria:");
-                MemoriaData memoriaData = new MemoriaData(DateTime.Now, item.Value["operacion"].ToString(),(int) item.Value["resultado"]);
-                Console.WriteLine("Fecha \n:");
-                Console.WriteLine(item.Key.ToString());
-                Console.WriteLine("El resultado es \n:");
-                Console.WriteLine(memoriaData.resultado.ToString());
+                var dbJSON = reader.ReadToEnd();
+                var dbObject = JObject.Parse(dbJSON);
+                // Prueba de lectura de archivo db.json
+                //var result = dbObject.ToString();
+                //var result = dbObject["arreglo"].ToString();
+                //var result = dbObject["arreglo"][0].ToString();
+                // Lectura de json iterable
+                foreach (var item in dbObject)
+                {
+                    // Iteración individual de cada grupo de datos del objeto json.
+                    Console.WriteLine("Dato en memoria:");
+                    MemoriaData memoriaData = new MemoriaData(DateTime.Now, item.Value["operacion"].ToString(), (int)item.Value["resultado"]);
+                    Console.WriteLine("Fecha \n:");
+                    Console.WriteLine(item.Key.ToString());
+                    Console.WriteLine("El resultado es \n:");
+                    Console.WriteLine(memoriaData.resultado.ToString());
+                }
             }
         }
     }
