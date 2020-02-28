@@ -17,10 +17,10 @@ namespace PracticaDos
                 var dbJSON = reader.ReadToEnd();
                 var dbObject = JObject.Parse(dbJSON);
                 // Prueba de lectura de archivo db.json
-                //var result = dbObject.ToString();
-                //var result = dbObject["arreglo"].ToString();
-                //var result = dbObject["arreglo"][0].ToString();
-                // Lectura de json iterable
+                // var result = dbObject.ToString();
+                // var result = dbObject["arreglo"].ToString();
+                // var result = dbObject["arreglo"][0].ToString();
+                // Lectura del json iterable
                 foreach (var item in dbObject)
                 {
                     // Iteración individual de cada grupo de datos del objeto json.

@@ -65,7 +65,7 @@ namespace PracticaDos
                         Console.WriteLine("-----------------\n");
                         Memoria memoria = new Memoria();
                         memoria.LeerMemoria();
-                        //Elegir la opcion de resultado en nuestra memoria y reautilizarla en alguna operacion.
+                        // Elegir la opcion de resultado en nuestra memoria y reautilizarla en alguna operacion.
                         // 1. Crear metodo que nos regrese el resultado en una nueva operacion.
                         // 2. Utilizar el resultado en una nueva operacion.
                         // 3. Guardar la nueva operacion en nuestro db.Json
