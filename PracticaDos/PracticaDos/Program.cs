@@ -63,6 +63,7 @@ namespace PracticaDos
                     case "m":
                         Console.WriteLine("Accediendo a Memoria \n");
                         Console.WriteLine("-----------------\n");
+                        memoria.arreglo();
                         Memoria memoria = new Memoria();
                         memoria.LeerMemoria();
                         // Elegir la opcion de resultado en nuestra memoria y reautilizarla en alguna operacion.

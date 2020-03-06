@@ -34,6 +34,34 @@ namespace PracticaDos
             }
         }
     }
+
+    public void arreglos ()
+    {
+        string[] Colores = {"Rojo", "Blanco", "Morado"};
+        //List<string> colores = ["Rojo", "Blanco", "Morado"];
+        //colores.Sort();
+        Array.Sort(Colores);
+        Array.ForEach(Colores, (item)=>{
+            Console.WriteLine(item);
+        });
+        String color =Array.Find(Colores, (item) => {
+            return item.Length > 4;
+            //return item != "Morado";
+        });
+        
+        Console.WriteLine(color);
+        Console.WriteLine ("Accede tus colores favoritos y separalos por espacios:");
+        String colorUser = Console.ReadLine();
+        //Un string se puede convertir en arreglo con su propedad Split, dandole el patron.
+        string[] newColors = colorUser.Split(' ');
+        Console.WriteLine(newColors);
+    }
+        public void multidimensional ()
+        {
+            int[,] array = new int [4, 2,3];
+            Console.WriteLine(array);
+        }
+
     class MemoriaData
     {
         public DateTime fecha;
