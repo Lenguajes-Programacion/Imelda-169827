@@ -1,0 +1,8 @@
+En pocas palabras podríamos decir que estos no son “arreglos de arreglos”, sino que en realidad son matrices dado que no es posible declarar arreglos dentro de ellos como con los escalonados.
+Los arreglos multidimensionales tienen más de una dimensión. Este también es un tipo de dato estructurado, que está compuesto por n dimensiones. Para hacer referencia a cada componente del arreglo es necesario utilizar n índices, uno para cada dimensión.
+
+Para manejar un arreglo, las operaciones a efectuarse son:
+·Declaración del arreglo
+·Creación del arreglo
+·Inicialización de de los elementos del arreglo
+·Acceso a los elementos del arreglo
