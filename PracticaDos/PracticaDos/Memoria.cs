@@ -35,15 +35,11 @@ namespace PracticaDos
                 MemoriaData memoriaData = new MemoriaData(item.Key.ToString(), item.Value["operacion"].ToString(),item.Value["resultado"].ToString());
                 this.db.Add(memoriaData);
                 Console.WriteLine("Dato en memoria: ({0})", i);
-                Console.BackgroundColor = ConsoleColor.Green;
                 Console.WriteLine("{0} - {1}", memoriaData.fecha.ToLongDateString(),
                 memoriaData.fecha.ToLongTimeString());
-                Console.ResetColor();
                 Console.WriteLine("Operación: {0}",memoriaData.operacion);
                 Console.WriteLine("Resultado: {0}",memoriaData.resultado.ToString());
-                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("----------------- \n");
-                Console.ForegroundColor = ConsoleColor.White;
                 i++;
             }
         }
@@ -51,7 +47,7 @@ namespace PracticaDos
         {
             // Encontrar el dato deseado con indice manual en el parseo del json.
             int index = int.Parse(key);
-            // Opción Nativa:  para buscar de manera nativa en nuestro List db. Con el indice autogenerado.
+            // Opción Nativa:  para buscar de manera nativa en nuestro List db. con el indice autogenerado.
             // En tres lineas de código encontramos y reutilizamos el valor que se busca.
             MemoriaData data = db[index];
             return data.resultado;
@@ -63,15 +59,11 @@ namespace PracticaDos
             db.ForEach((MemoriaData memoriaData) =>
             {
                 Console.WriteLine("Dato en memoria: ({0})", i);
-                Console.BackgroundColor = ConsoleColor.Green;
                 Console.WriteLine("{0} - {1}", memoriaData.fecha.ToLongDateString(),
                 memoriaData.fecha.ToLongTimeString());
-                Console.ResetColor();
                 Console.WriteLine("Operación: {0}", memoriaData.operacion);
                 Console.WriteLine("Resultado: {0}", memoriaData.resultado.ToString());
-                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("----------------- \n");
-                Console.ForegroundColor = ConsoleColor.White;
                 i++;
             });
             string json = JsonConvert.SerializeObject(db.ToArray(), Formatting.Indented);

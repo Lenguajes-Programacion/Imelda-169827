@@ -17,13 +17,13 @@ namespace PracticaDos
             while (close_app)
             {
                 Console.WriteLine("Elige una opción:");
-                Console.WriteLine("(+) Suma");
-                Console.WriteLine("(-) Resta");
-                Console.WriteLine("(*) Multiplicación");
-                Console.WriteLine("(/) Disión");
-                Console.WriteLine("(m) Memoria");
-                Console.WriteLine("(mr) Borrar Memoria");
-                Console.WriteLine("e Para salir \n");
+                Console.WriteLine("Presiona (+) Suma");
+                Console.WriteLine("Presiona (-) Resta");
+                Console.WriteLine("Presiona (*) Multiplicación");
+                Console.WriteLine("Presiona (/) Disión");
+                Console.WriteLine("Presiona (m) Memoria");
+                Console.WriteLine("Presiona (mr) Borrar Memoria");
+                Console.WriteLine("Presiona (e) Para salir \n");
                 string opcion = Console.ReadLine();
                 switch (opcion)
                 {
